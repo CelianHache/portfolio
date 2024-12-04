@@ -11,14 +11,13 @@ export const ProfileContainer: React.FC = () => {
             gradientTo={"blue.50"}
             minW={{ base: "100%", lg: "80%", xl: "500px" }}
             flex={1}
-            p={5}
             rounded={"lg"}
             border={"none"}
             shadow={"sm"}
             position={{ base: "initial", xl: "sticky" }}
             top={24}
         >
-            <Card.Title textAlign={"center"} color={"gray.900"}>
+            <Card.Title textAlign={"center"} color={"gray.900"} pt={5}>
                 Célian Hache
             </Card.Title>
             <Card.Body>

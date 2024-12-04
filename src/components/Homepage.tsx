@@ -1,6 +1,6 @@
 import React from "react";
 import { BlockquoteContent, BlockquoteRoot, Box } from "@chakra-ui/react";
-import { LightBlueGradient } from "./containers/LightBlueGradient";
+import { MotionContainer } from "./containers/MotionContainer";
 import { PagePreview } from "./containers/PagePreview";
 import { ProfileContainer } from "./containers/ProfileContainer";
 
@@ -9,34 +9,34 @@ const HomePage: React.FC = () => {
         {
             content:
                 "Showcase of technical and creative projects, prototypes, and practical applications developed during the course.",
-            src: "./engineering.jpg",
+            src: "./Tabs/engineering.jpg",
             title: "Engineering course",
             to: "./engineering",
         },
         {
             content:
                 "Overview of international mobility options, including PCE and second language courses",
-            src: "./mobility.jpg",
+            src: "./Tabs/mobility.jpg",
             title: "International mobility",
             to: "./mobility",
         },
         {
             content:
                 "Projects and initiatives focused on sustainability and civic responsibility.",
-            src: "./sustainability.jpg",
+            src: "./Tabs/sustainability.jpg",
             title: "Sustainability and civic engagement",
             to: "./sustainability",
         },
         {
             content: "Explore sports, arts, and extracurricular activities.",
-            src: "./activities.jpg",
+            src: "./Tabs/activities.jpg",
             title: "Sport and other activities",
             to: "./activities",
         },
         {
             content:
                 "Resources and opportunities for professional growth and career planning.",
-            src: "./career.jpg",
+            src: "./Tabs/career.jpg",
             title: "Career development",
             to: "./careeer",
         },
@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
                 spaceY={5}
                 w={{ base: "100%", lg: "80%", xl: "auto" }}
             >
-                <LightBlueGradient p={5}>
+                <MotionContainer p={5}>
                     <BlockquoteRoot>
                         <BlockquoteContent textAlign={"justify"}>
                             I am a computer science student at ENSEEIHT in
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
                             practices.
                         </BlockquoteContent>
                     </BlockquoteRoot>
-                </LightBlueGradient>
+                </MotionContainer>
                 {pages.map((page, index) => (
                     <PagePreview
                         key={index}

@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 // Créez un Box animé avec motion.div
 const MotionBox = chakra(motion.div);
 
-export const LightBlueGradient: React.FC<PropsWithChildren<any>> = (props) => {
+export const MotionContainer: React.FC<PropsWithChildren<any>> = (props) => {
     // Créer un ref pour suivre l'élément
     const ref = useRef(null);
 
@@ -15,9 +15,9 @@ export const LightBlueGradient: React.FC<PropsWithChildren<any>> = (props) => {
     return (
         <MotionBox
             ref={ref} // Ajoutez la référence à l'élément pour le suivi de la visibilité
-            bgGradient={"to-br"}
-            gradientFrom={"white"}
-            gradientTo={"blue.50"}
+            bgGradient={props.bgColor ? "none" : "to-br"}
+            gradientFrom={props.bgColor ? "none" : "white"}
+            gradientTo={props.bgColor ? "none" : "blue.50"}
             rounded={"md"}
             shadow={"sm"}
             initial={{ opacity: 0, scale: 0.8 }} // Initialement invisible et légèrement rétréci

@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Card } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { NavLink } from "react-router-dom";
-import { LightBlueGradient } from "./LightBlueGradient";
+import { MotionContainer } from "./MotionContainer";
 import { Button } from "../ui/button";
 import { RetryImage } from "./RetryImage";
 
@@ -17,7 +17,7 @@ export const PagePreview: React.FC<PropsWithChildren<PagePreviewProps>> = (
     props
 ) => {
     return (
-        <LightBlueGradient>
+        <MotionContainer>
             <Card.Root
                 flexDirection="row"
                 overflow="hidden"
@@ -70,6 +70,6 @@ export const PagePreview: React.FC<PropsWithChildren<PagePreviewProps>> = (
                     />
                 </AspectRatio>
             </Card.Root>
-        </LightBlueGradient>
+        </MotionContainer>
     );
 };

@@ -10,12 +10,14 @@ import { LegalMention } from "./components/footer/LegalMention";
 import { EngineeringCourse } from "./components/engineering/EngineeringCourse";
 import { Projects } from "./components/engineering/Projects";
 import { Productions } from "./components/engineering/Productions";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 function App() {
     return (
         <Provider>
             <AnimatedBackground>
                 <Router basename="/portfolio/">
+                    <ScrollToTop />
                     <Flex
                         direction="column"
                         minHeight="100vh"
