@@ -1,7 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { Projects } from "./Projects";
 import { Productions } from "./Productions";
-import { MotionContainer } from "../containers/MotionContainer";
 
 export const EngineeringCourse: React.FC = () => {
     return (
