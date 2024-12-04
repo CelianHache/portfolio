@@ -1,5 +1,5 @@
 import { HStack, IconButton } from "@chakra-ui/react";
-import { AtSign, Github, GithubIcon } from "lucide-react";
+import { AtSign, Github } from "lucide-react";
 import { BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
