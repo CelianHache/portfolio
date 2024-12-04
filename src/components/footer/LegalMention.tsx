@@ -1,6 +1,7 @@
-import { Heading, Image, Table, Text, VStack } from "@chakra-ui/react";
+import { Heading, Table, Text, VStack } from "@chakra-ui/react";
 import { LightBlueGradient } from "../containers/LightBlueGradient";
 import { NavLink } from "react-router-dom";
+import { RetryImage } from "../containers/RetryImage";
 
 export const LegalMention: React.FC = () => {
     const images = [
@@ -74,7 +75,7 @@ export const LegalMention: React.FC = () => {
                             <Table.Row key={index} bgColor={"transparent"}>
                                 <Table.Cell>{index + 1}</Table.Cell>
                                 <Table.Cell>
-                                    <Image
+                                    <RetryImage
                                         src={image.loc}
                                         maxBlockSize={"100px"}
                                     />

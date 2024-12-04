@@ -7,12 +7,15 @@ import Navbar from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { FooterSummary } from "./components/footer/FooterSummary";
 import { LegalMention } from "./components/footer/LegalMention";
+import { EngineeringCourse } from "./components/engineering/EngineeringCourse";
+import { Projects } from "./components/engineering/Projects";
+import { Productions } from "./components/engineering/Productions";
 
 function App() {
     return (
         <Provider>
             <AnimatedBackground>
-                <Router>
+                <Router basename="/portfolio">
                     <Flex
                         direction="column"
                         minHeight="100vh"
@@ -38,6 +41,18 @@ function App() {
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
                                 <Route
+                                    path="/engineering"
+                                    element={<EngineeringCourse />}
+                                />
+                                <Route
+                                    path="/engineering/projects"
+                                    element={<Projects />}
+                                />
+                                <Route
+                                    path="/engineering/productions"
+                                    element={<Productions />}
+                                />
+                                <Route
                                     path="/legal_mention"
                                     element={<LegalMention />}
                                 />
@@ -50,7 +65,7 @@ function App() {
                             as="footer"
                             p={5}
                             bgColor={"gray.800"}
-                            position="sticky"
+                            position={{ base: "initial", lg: "sticky" }}
                             bottom={0}
                             left={0}
                             right={0}

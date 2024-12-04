@@ -1,8 +1,9 @@
-import { AspectRatio, Box, Card, Image } from "@chakra-ui/react";
+import { AspectRatio, Box, Card } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
 import { NavLink } from "react-router-dom";
 import { LightBlueGradient } from "./LightBlueGradient";
 import { Button } from "../ui/button";
+import { RetryImage } from "./RetryImage";
 
 interface PagePreviewProps {
     title: string;
@@ -30,7 +31,11 @@ export const PagePreview: React.FC<PropsWithChildren<PagePreviewProps>> = (
                     ratio={16 / 9}
                     hidden={props.reverse}
                 >
-                    <Image objectFit="cover" src={props.src} alt={props.src} />
+                    <RetryImage
+                        objectFit="cover"
+                        src={`${import.meta.env.BASE_URL}${props.src}`}
+                        alt={props.src}
+                    />
                 </AspectRatio>
                 <Box
                     p={5}
@@ -58,7 +63,11 @@ export const PagePreview: React.FC<PropsWithChildren<PagePreviewProps>> = (
                     ratio={16 / 9}
                     hidden={!props.reverse}
                 >
-                    <Image objectFit="cover" src={props.src} alt={props.src} />
+                    <RetryImage
+                        objectFit="cover"
+                        src={`${import.meta.env.BASE_URL}${props.src}`}
+                        alt={props.src}
+                    />
                 </AspectRatio>
             </Card.Root>
         </LightBlueGradient>

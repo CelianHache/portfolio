@@ -34,7 +34,7 @@ export const SocialNetworks: React.FC<SocialNetworks> = (props) => {
                 }}
             >
                 <Link
-                    to="https://www.blue.com/in/c%C3%A9lian-hache-2189a626a/"
+                    to="https://www.linkedin.com/in/c%C3%A9lian-hache-2189a626a/"
                     target="_blank"
                 >
                     <BsLinkedin />

@@ -28,14 +28,13 @@ export const DrawerNavbar: React.FC = () => {
     } = useDisclosure();
 
     return (
-        <Flex px={10} gap={10} justifyContent="flex-end" flex={1}>
+        <Flex gap={10} justifyContent="flex-end" flex={1}>
             <DrawerRoot open={openDrawer} onInteractOutside={onCloseDrawer}>
                 <DrawerBackdrop />
                 <DrawerTrigger asChild>
                     <IconButton
                         variant={"outline"}
                         border={"none"}
-                        backdropBlur={"1000px"}
                         bgColor={"transparent"}
                         color={"gray.900"}
                         onClick={onOpenDrawer}
@@ -43,10 +42,12 @@ export const DrawerNavbar: React.FC = () => {
                         <Menu />
                     </IconButton>
                 </DrawerTrigger>
-                <DrawerContent offset={4} rounded={"md"} bgColor={"gray.800"}>
+                <DrawerContent offset={1} rounded={"md"} bgColor={"gray.800"}>
                     <DrawerCloseTrigger onClick={onCloseDrawer} />
                     <DrawerHeader>
-                        <DrawerTitle fontSize={"xl"}>Portfolio.</DrawerTitle>
+                        <DrawerTitle fontSize={"xl"} color={"white"}>
+                            Portfolio.
+                        </DrawerTitle>
                     </DrawerHeader>
                     <DrawerBody>
                         <VStack gap={6} align="start">
@@ -55,12 +56,13 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"md"}
                                 >
                                     Welcome
@@ -71,12 +73,13 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"md"}
                                 >
                                     Engineering course
@@ -87,13 +90,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     Projects
@@ -104,13 +108,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     Productions
@@ -121,12 +126,13 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"md"}
                                 >
                                     International mobility
@@ -137,13 +143,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     PCE
@@ -154,13 +161,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     LV2
@@ -171,12 +179,13 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"md"}
                                 >
                                     Career development
@@ -187,13 +196,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     Internship
@@ -204,13 +214,14 @@ export const DrawerNavbar: React.FC = () => {
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
-                                        ? "underline"
+                                        ? "underline white"
                                         : "none",
                                 })}
                             >
                                 <Heading
                                     p={3}
                                     _hover={{ color: "blue.500" }}
+                                    color={"white"}
                                     size={"sm"}
                                 >
                                     PEP

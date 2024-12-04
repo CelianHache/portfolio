@@ -1,5 +1,4 @@
 import { VStack, Button, HStack } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 export const CVSection: React.FC = () => {
     return (
@@ -12,9 +11,9 @@ export const CVSection: React.FC = () => {
                     _hover={{ bgColor: "blue.500" }}
                     rounded={"md"}
                 >
-                    <Link to="/cv/CV_fr.pdf" target="_blank">
+                    <a href="./cv/CV_fr.pdf" target="_blank">
                         Resume (fr)
-                    </Link>
+                    </a>
                 </Button>
                 <Button
                     asChild
@@ -23,9 +22,9 @@ export const CVSection: React.FC = () => {
                     _hover={{ bgColor: "blue.500" }}
                     rounded={"md"}
                 >
-                    <Link to="/cv/CV_en.pdf" target="_blank">
+                    <a href="./cv/CV_en.pdf" target="_blank">
                         Resume (en)
-                    </Link>
+                    </a>
                 </Button>
             </HStack>
         </VStack>

@@ -1,6 +1,7 @@
-import { Box, Card, CardFooter, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Card, CardFooter, Text, VStack } from "@chakra-ui/react";
 import { SocialNetworks } from "../socials/SocialNetworks";
 import { CVSection } from "../cv/CVSection";
+import { RetryImage } from "./RetryImage";
 
 export const ProfileContainer: React.FC = () => {
     return (
@@ -30,8 +31,9 @@ export const ProfileContainer: React.FC = () => {
                     flexDir={"column"}
                     gap={5}
                 >
-                    <Image
-                        src="./profile.png"
+                    <RetryImage
+                        objectFit="cover"
+                        src={`${import.meta.env.BASE_URL}/profile.png`}
                         alt="Profile picture"
                         bgColor={"white"}
                         rounded={"50%"}
