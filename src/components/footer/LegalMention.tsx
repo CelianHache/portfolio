@@ -1,4 +1,4 @@
-import { Heading, Table, Text, VStack } from "@chakra-ui/react";
+import { Box, Heading, Table, Text, VStack } from "@chakra-ui/react";
 import { MotionContainer } from "../containers/MotionContainer";
 import { NavLink } from "react-router-dom";
 import { RetryImage } from "../containers/RetryImage";
@@ -55,91 +55,112 @@ export const LegalMention: React.FC = () => {
             </MotionContainer>
             <MotionContainer p={5} w={"100%"}>
                 <Heading size={"lg"}>1. Legal informations</Heading>
-                <Text>This website is published by Célian Hache.</Text>
-                <Text>Location : 31300 Toulouse (France)</Text>
-                <Text>
-                    Contact :{" "}
-                    <NavLink
-                        color="blue.500"
-                        to="mailto:celian.hache@gmail.com"
-                    >
-                        celian.hache@gmail.com
-                    </NavLink>
-                </Text>
+                <Box p={5}>
+                    <Text>This website is published by Célian Hache.</Text>
+                    <Text>Location : 31300 Toulouse (France)</Text>
+                    <Text>
+                        Contact :{" "}
+                        <NavLink
+                            color="blue.500"
+                            to="mailto:celian.hache@gmail.com"
+                        >
+                            celian.hache@gmail.com
+                        </NavLink>
+                    </Text>
+                </Box>
             </MotionContainer>
-
             <MotionContainer p={5} w={"100%"}>
                 <Heading size={"lg"}>2. Intellectual property</Heading>
-                <Text>
-                    The content of this website (texts, images, videos) is
-                    protected by copyright. Any reproduction or distribution is
-                    strictly prohibited without prior written consent.
-                </Text>
+                <Box p={5}>
+                    <Text>
+                        The content of this website (texts, images, videos) is
+                        protected by copyright. Any reproduction or distribution
+                        is strictly prohibited without prior written consent.
+                    </Text>
+                    <Text mt={3}>
+                        The background design was inspired by the website of
+                        Dylan Latapie.
+                    </Text>
+                    <NavLink to="https://dylan.latapie.ovh/">
+                        <Text color="blue.500">Dylan Latapie's website</Text>
+                    </NavLink>
+                </Box>
             </MotionContainer>
             <MotionContainer p={5} w={"100%"}>
                 <Heading size={"lg"}>3. Image credits</Heading>
-                <Table.Root>
-                    <Table.Header>
-                        <Table.Row bgColor={"transparent"}>
-                            <Table.ColumnHeader color={"black"}>
-                                Index
-                            </Table.ColumnHeader>
-                            <Table.ColumnHeader color={"black"}>
-                                Image
-                            </Table.ColumnHeader>
-                            <Table.ColumnHeader color={"black"}>
-                                License
-                            </Table.ColumnHeader>
-                        </Table.Row>
-                    </Table.Header>
-                    <Table.Body>
-                        {images.map((image, index) => (
-                            <Table.Row key={index} bgColor={"transparent"}>
-                                <Table.Cell>{index + 1}</Table.Cell>
-                                <Table.Cell>
-                                    <NavLink
-                                        to={
-                                            image.source !== ""
-                                                ? image.source
-                                                : image.loc
-                                        }
-                                    >
-                                        <RetryImage
-                                            src={image.loc}
-                                            maxBlockSize={"100px"}
-                                        />
-                                    </NavLink>
-                                </Table.Cell>
-                                <Table.Cell>
-                                    <NavLink
-                                        hidden={image.licence_link === ""}
-                                        to={image.licence_link}
-                                    >
+                <Box p={5}>
+                    <Table.Root>
+                        <Table.Header>
+                            <Table.Row bgColor={"transparent"}>
+                                <Table.ColumnHeader color={"black"}>
+                                    Index
+                                </Table.ColumnHeader>
+                                <Table.ColumnHeader color={"black"}>
+                                    Image
+                                </Table.ColumnHeader>
+                                <Table.ColumnHeader color={"black"}>
+                                    License
+                                </Table.ColumnHeader>
+                            </Table.Row>
+                        </Table.Header>
+                        <Table.Body>
+                            {images.map((image, index) => (
+                                <Table.Row key={index} bgColor={"transparent"}>
+                                    <Table.Cell>{index + 1}</Table.Cell>
+                                    <Table.Cell>
+                                        <NavLink
+                                            to={image.source}
+                                            hidden={image.source === ""}
+                                        >
+                                            <RetryImage
+                                                src={image.loc}
+                                                maxBlockSize={"100px"}
+                                            />
+                                        </NavLink>
+                                        {image.source === "" && (
+                                            <a href={image.loc} target="_blank">
+                                                <RetryImage
+                                                    src={image.loc}
+                                                    maxBlockSize={"100px"}
+                                                />
+                                            </a>
+                                        )}
+                                    </Table.Cell>
+                                    <Table.Cell>
+                                        <NavLink
+                                            hidden={image.licence_link === ""}
+                                            to={image.licence_link}
+                                        >
+                                            <Text
+                                                color={"blue.600"}
+                                                _hover={{ color: "blue.400" }}
+                                            >
+                                                {image.licence}
+                                            </Text>
+                                        </NavLink>
                                         <Text
-                                            color={"blue.600"}
-                                            _hover={{ color: "blue.400" }}
+                                            hidden={image.licence_link !== ""}
                                         >
                                             {image.licence}
                                         </Text>
-                                    </NavLink>
-                                    <Text hidden={image.licence_link !== ""}>
-                                        {image.licence}
-                                    </Text>
-                                </Table.Cell>
-                            </Table.Row>
-                        ))}
-                    </Table.Body>
-                </Table.Root>
+                                    </Table.Cell>
+                                </Table.Row>
+                            ))}
+                        </Table.Body>
+                    </Table.Root>
+                </Box>
             </MotionContainer>
             <MotionContainer p={5} w={"100%"}>
                 <Heading size={"lg"}>4. Hosting</Heading>
-                <Text>This website is hosted by GitHub Pages.</Text>
+                <Box p={5}>
+                    <Text>This website is hosted by GitHub Pages.</Text>
 
-                <NavLink to={"https://celianhache.github.io/portfolio"}>
-                    <Text color={"blue.600"} _hover={{ color: "blue.400" }}>
-                        https://celianhache.github.io/portfolio/
-                    </Text>
-                </NavLink>
+                    <NavLink to={"https://celianhache.github.io/portfolio"}>
+                        <Text color={"blue.600"} _hover={{ color: "blue.400" }}>
+                            https://celianhache.github.io/portfolio/
+                        </Text>
+                    </NavLink>
+                </Box>
             </MotionContainer>
         </VStack>
     );
