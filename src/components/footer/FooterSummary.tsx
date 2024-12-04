@@ -5,7 +5,7 @@ export const FooterSummary: React.FC = () => {
     return (
         <HStack color={"white"} w={"100%"} justifyContent={"start"}>
             <Text fontSize={"xs"}>Copyright © 2024 - All rights reserved</Text>
-            <SocialNetworks alignItems="end" classicTheme="white" />
+            <SocialNetworks alignItems="end" classicTheme="white" dark />
         </HStack>
     );
 };
