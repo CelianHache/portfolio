@@ -5,7 +5,7 @@ import { Productions } from "./Productions";
 export const EngineeringCourse: React.FC = () => {
     return (
         <>
-            <Heading>engineering course</Heading>
+            <Heading>Engineering course</Heading>
             <Projects></Projects>
             <Productions></Productions>
         </>

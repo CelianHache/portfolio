@@ -15,7 +15,7 @@ function App() {
     return (
         <Provider>
             <AnimatedBackground>
-                <Router basename="/portfolio">
+                <Router basename="/portfolio/">
                     <Flex
                         direction="column"
                         minHeight="100vh"
