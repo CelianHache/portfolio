@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { MotionContainer } from "../containers/MotionContainer";
 import { RetryImage } from "../containers/RetryImage";
+import { WorkInProgress } from "../containers/WorkInProgress";
 
 interface Production {
     title: string;
@@ -33,17 +34,17 @@ export const Productions = () => {
                 color={"gray.800"}
                 size={"xl"}
                 fontWeight={"semi-bold"}
-                letterSpacing={"wider"}
+                fontFamily={"Poppins"}
                 textTransform={"uppercase"}
             >
                 Productions
             </Heading>
-            <Text>Work in progress...</Text>
+            <WorkInProgress />
             <Grid
                 templateColumns={{
                     base: "1fr",
                     md: "repeat(2, 1fr)",
-                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(3, 1fr)",
                 }}
                 gap={6}
             >

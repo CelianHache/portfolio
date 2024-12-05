@@ -1,8 +1,8 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { Projects } from "./Projects";
-import { Productions } from "./Productions";
+import { PEP } from "./PEP";
+import { Internship } from "./Internship";
 
-export const EngineeringCourse: React.FC = () => {
+export const Career: React.FC = () => {
     return (
         <Box w={"100%"} display={"flex"} justifyContent={"center"}>
             <Box spaceY={5} w={{ base: "100%", lg: "80%" }}>
@@ -13,11 +13,10 @@ export const EngineeringCourse: React.FC = () => {
                     fontFamily={"Poppins"}
                     py={5}
                 >
-                    Engineering course
+                    Career development
                 </Heading>
-
-                <Projects />
-                <Productions />
+                <Internship />
+                <PEP />
             </Box>
         </Box>
     );

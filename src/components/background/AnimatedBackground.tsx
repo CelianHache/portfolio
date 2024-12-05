@@ -9,7 +9,7 @@ const generateRandomPosition = () => {
 };
 
 const generateRandomSize = () => {
-    return `${Math.random() * 100 + 200}px`;
+    return `${Math.random() * 300 + 200}px`;
 };
 
 const generateRandomColor = () => {
@@ -85,9 +85,9 @@ const AnimatedBackground = ({ children }: { children: React.ReactNode }) => {
                 top="0"
                 left="0"
                 width="100%"
-                height="120%"
+                height="100%"
                 overflow={"hidden"}
-                backdropFilter="blur(50px)"
+                backdropFilter="blur(60px)"
                 zIndex={0}
                 bgColor="rgba(255, 255, 255, 0.4)"
             />

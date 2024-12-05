@@ -5,10 +5,10 @@ const ScrollToTop: React.FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top of the page
-    }, [location]); // Only run this effect when the location changes (i.e., when the route changes)
+        window.scrollTo(0, 0);
+    }, [location]);
 
-    return null; // This component doesn't need to render anything
+    return null;
 };
 
 export default ScrollToTop;

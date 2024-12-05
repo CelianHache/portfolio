@@ -9,7 +9,9 @@ const Navbar: React.FC = () => {
     return (
         <VStack alignItems={"center"}>
             <HStack w={"100%"}>
-                <Heading size={"3xl"}>Portfolio.</Heading>
+                <Heading size={"3xl"} fontFamily={"Poppins"}>
+                    Portfolio.
+                </Heading>
                 {showDrawer ? <DrawerNavbar /> : <InlineNavbar />}
             </HStack>
         </VStack>

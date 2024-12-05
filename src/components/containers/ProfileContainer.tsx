@@ -1,4 +1,4 @@
-import { Box, Card, CardFooter, Text, VStack } from "@chakra-ui/react";
+import { Box, Card, CardFooter, Heading, Text, VStack } from "@chakra-ui/react";
 import { SocialNetworks } from "../socials/SocialNetworks";
 import { CVSection } from "../cv/CVSection";
 import { RetryImage } from "./RetryImage";
@@ -17,8 +17,17 @@ export const ProfileContainer: React.FC = () => {
             position={{ base: "initial", xl: "sticky" }}
             top={24}
         >
-            <Card.Title textAlign={"center"} color={"gray.900"} pt={5}>
-                Célian Hache
+            <Card.Title>
+                <Heading
+                    fontFamily={"Poppins"}
+                    fontSize={"2xl"}
+                    fontWeight={"semi-bold"}
+                    textAlign={"center"}
+                    color={"gray.900"}
+                    pt={10}
+                >
+                    Célian Hache
+                </Heading>
             </Card.Title>
             <Card.Body>
                 <Box

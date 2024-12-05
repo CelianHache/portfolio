@@ -64,7 +64,7 @@ export const Projects = () => {
                 color={"gray.800"}
                 size={"xl"}
                 fontWeight={"semi-bold"}
-                letterSpacing={"wider"}
+                fontFamily={"Poppins"}
                 textTransform={"uppercase"}
             >
                 Projects
@@ -73,7 +73,7 @@ export const Projects = () => {
                 templateColumns={{
                     base: "1fr",
                     md: "repeat(2, 1fr)",
-                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(3, 1fr)",
                 }}
                 gap={5}
             >

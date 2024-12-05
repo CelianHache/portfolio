@@ -42,43 +42,45 @@ const HomePage: React.FC = () => {
         },
     ];
     return (
-        <Box
-            w={"100%"}
-            position={"relative"}
-            alignItems={{ base: "center", xl: "start" }}
-            display={"flex"}
-            flexDir={{ base: "column", xl: "row" }}
-            gap={5}
-        >
-            <ProfileContainer />
+        <Box w={"100%"} display={"flex"} justifyContent={"center"}>
             <Box
-                flex={3}
-                spaceY={5}
-                w={{ base: "100%", lg: "80%", xl: "auto" }}
+                w={{ base: "100%", lg: "80%" }}
+                position={"relative"}
+                alignItems={{ base: "center", xl: "start" }}
+                display={"flex"}
+                flexDir={{ base: "column", xl: "row" }}
+                gap={5}
             >
-                <MotionContainer p={5}>
-                    <BlockquoteRoot>
-                        <BlockquoteContent textAlign={"justify"}>
-                            I am a computer science student at ENSEEIHT in
-                            Toulouse, with a solid foundation from the MPSI
-                            preparatory program and a specialization in computer
-                            science from Blagnac IUT. As a Software Engineering
-                            Apprentice at Collins Aerospace, I gained hands-on
-                            experience in tool development and DevSecOps
-                            practices.
-                        </BlockquoteContent>
-                    </BlockquoteRoot>
-                </MotionContainer>
-                {pages.map((page, index) => (
-                    <PagePreview
-                        key={index}
-                        content={page.content}
-                        src={page.src}
-                        title={page.title}
-                        to={page.to}
-                        reverse={index % 2 === 0}
-                    />
-                ))}
+                <ProfileContainer />
+                <Box
+                    flex={3}
+                    spaceY={5}
+                    w={{ base: "100%", lg: "80%", xl: "auto" }}
+                >
+                    <MotionContainer p={5}>
+                        <BlockquoteRoot>
+                            <BlockquoteContent textAlign={"justify"}>
+                                I am a computer science student at ENSEEIHT in
+                                Toulouse, with a solid foundation from the MPSI
+                                preparatory program and a specialization in
+                                computer science from Blagnac IUT. As a Software
+                                Engineering Apprentice at Collins Aerospace, I
+                                gained hands-on experience in tool development
+                                and DevSecOps practices.
+                            </BlockquoteContent>
+                        </BlockquoteRoot>
+                    </MotionContainer>
+                    {pages.map((page, index) => (
+                        <PagePreview
+                            key={index}
+                            content={page.content}
+                            src={page.src}
+                            title={page.title}
+                            to={page.to}
+                            reverse={index % 2 === 0}
+                        />
+                    ))}
+                </Box>
             </Box>
         </Box>
     );
