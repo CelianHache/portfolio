@@ -4,10 +4,8 @@ import { MotionContainer } from "./MotionContainer";
 export const WorkInProgress: React.FC = () => {
     return (
         <MotionContainer
-            p={5}
+            p={20}
             bgColor={"transparent"}
-            minH={"400px"}
-            minW={"500px"}
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
