@@ -1,6 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { PEP } from "./PEP";
-import { Internship } from "./Internship";
+import { Apprenticeship } from "./Apprenticeship";
 
 export const Career: React.FC = () => {
     return (
@@ -15,7 +15,7 @@ export const Career: React.FC = () => {
                 >
                     Career development
                 </Heading>
-                <Internship />
+                <Apprenticeship />
                 <PEP />
             </Box>
         </Box>

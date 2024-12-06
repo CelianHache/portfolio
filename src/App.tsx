@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import { Footer } from "./components/footer/Footer";
 import { FooterSummary } from "./components/footer/FooterSummary";
 import { LegalMention } from "./components/footer/LegalMention";
-import { EngineeringCourse } from "./components/engineering/EngineeringCourse";
+import { EngineeringCourses } from "./components/engineering/EngineeringCourses";
 import { Projects } from "./components/engineering/Projects";
 import { Productions } from "./components/engineering/Productions";
 import ScrollToTop from "./components/utils/ScrollToTop";
@@ -17,7 +17,7 @@ import { LV2 } from "./components/mobility/LV2";
 import { Sustainability } from "./components/sutainability/Sustainability";
 import { Activities } from "./components/activities/Activities";
 import { Career } from "./components/career/career";
-import { Internship } from "./components/career/Internship";
+import { Apprenticeship } from "./components/career/Apprenticeship";
 import { PEP } from "./components/career/PEP";
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
                                 <Route path="/" element={<HomePage />} />
                                 <Route
                                     path="/engineering"
-                                    element={<EngineeringCourse />}
+                                    element={<EngineeringCourses />}
                                 />
                                 <Route
                                     path="/engineering/projects"
@@ -78,8 +78,8 @@ function App() {
                                 />
                                 <Route path="/career" element={<Career />} />
                                 <Route
-                                    path="/career/internship"
-                                    element={<Internship />}
+                                    path="/career/apprenticeship"
+                                    element={<Apprenticeship />}
                                 />
                                 <Route path="/career/pep" element={<PEP />} />{" "}
                                 <Route

@@ -19,7 +19,9 @@ export const RetryImage: React.FC<RetryImageProps> = ({
             setRetryCount(retryCount + 1);
             setCurrentSrc(`${src}?retry=${retryCount}`);
         } else {
-            console.error(`Failed to load image after ${maxRetries} retries.`);
+            console.error(
+                `Failed to load image ${currentSrc} after ${maxRetries} retries.`
+            );
         }
     };
 

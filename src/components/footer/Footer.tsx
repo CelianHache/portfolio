@@ -8,9 +8,9 @@ export const Footer: React.FC = () => {
                 Legal Mention
             </NavLink>
 
-            <NavLink to="/terms_of_use" color="white">
+            {/* <NavLink to="/terms_of_use" color="white">
                 Terms of use
-            </NavLink>
+            </NavLink> */}
         </VStack>
     );
 };

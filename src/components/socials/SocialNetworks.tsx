@@ -3,13 +3,16 @@ import { AtSign, Github } from "lucide-react";
 import { BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-interface SocialNetworks {
+export interface SocialNetworksProps {
     classicTheme?: "white" | "gray.900";
     dark?: boolean;
     alignItems: "center" | "end" | "start";
+    linkedin?: string;
+    email?: string;
+    github?: string;
 }
 
-export const SocialNetworks: React.FC<SocialNetworks> = (props) => {
+export const SocialNetworks: React.FC<SocialNetworksProps> = (props) => {
     return (
         <HStack justifyContent={props.alignItems} flex={1}>
             <IconButton
@@ -21,8 +24,9 @@ export const SocialNetworks: React.FC<SocialNetworks> = (props) => {
                     color: "white",
                 }}
                 rounded={"50%"}
+                hidden={props.email === undefined}
             >
-                <Link to="mailto:celian.hache@gmail.com" target="_blank">
+                <Link to={`mailto:${props.email}`} target="_blank">
                     <AtSign />
                 </Link>
             </IconButton>
@@ -35,11 +39,9 @@ export const SocialNetworks: React.FC<SocialNetworks> = (props) => {
                     color: "white",
                 }}
                 rounded={"50%"}
+                hidden={props.linkedin === undefined}
             >
-                <Link
-                    to="https://www.linkedin.com/in/c%C3%A9lian-hache-2189a626a/"
-                    target="_blank"
-                >
+                <Link to={props.linkedin || ""} target="_blank">
                     <BsLinkedin />
                 </Link>
             </IconButton>
@@ -52,8 +54,9 @@ export const SocialNetworks: React.FC<SocialNetworks> = (props) => {
                     color: props.dark ? "gray.900" : "white",
                 }}
                 rounded={"50%"}
+                hidden={props.github === undefined}
             >
-                <Link to="https://github.com/CelianHache" target="_blank">
+                <Link to={props.github || ""} target="_blank">
                     <Github />
                 </Link>
             </IconButton>

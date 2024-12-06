@@ -1,44 +1,44 @@
 import React from "react";
 import { BlockquoteContent, BlockquoteRoot, Box } from "@chakra-ui/react";
 import { MotionContainer } from "./containers/MotionContainer";
-import { PagePreview } from "./containers/PagePreview";
+import { ImageCard } from "./containers/ImageCard";
 import { ProfileContainer } from "./containers/ProfileContainer";
 
 const HomePage: React.FC = () => {
     const pages = [
         {
             content:
-                "Showcase of technical and creative projects, prototypes, and practical applications developed during the course.",
+                "Showcase of technical and creative projects, prototypes, and practical applications developed during the courses.",
             src: "./Tabs/engineering.jpg",
-            title: "Engineering course",
-            to: "./engineering",
+            title: "Engineering courses",
+            to: "/engineering",
         },
         {
             content:
-                "Overview of international mobility options, including PCE and second language courses",
+                "Overview of international mobility options, including PCE and second language coursess",
             src: "./Tabs/mobility.jpg",
             title: "International mobility",
-            to: "./mobility",
+            to: "/mobility",
         },
         {
             content:
                 "Projects and initiatives focused on sustainability and civic responsibility.",
             src: "./Tabs/sustainability.jpg",
             title: "Sustainability and civic engagement",
-            to: "./sustainability",
+            to: "/sustainability",
         },
         {
             content: "Explore sports, arts, and extracurricular activities.",
             src: "./Tabs/activities.jpg",
             title: "Sport and other activities",
-            to: "./activities",
+            to: "/activities",
         },
         {
             content:
                 "Resources and opportunities for professional growth and career planning.",
             src: "./Tabs/career.jpg",
             title: "Career development",
-            to: "./careeer",
+            to: "/career",
         },
     ];
     return (
@@ -51,7 +51,17 @@ const HomePage: React.FC = () => {
                 flexDir={{ base: "column", xl: "row" }}
                 gap={5}
             >
-                <ProfileContainer />
+                <ProfileContainer
+                    description="Apprentice Software Engineer at ENSEEIHT and Collins Aerospace"
+                    name="Célian Hache"
+                    src="profile.png"
+                    alignItems="center"
+                    cv_fr="cv/CV_fr.jpg"
+                    cv_en="cv/CV_en.jpg"
+                    email="celian.hache@gmail.com"
+                    linkedin="https://www.linkedin.com/in/c%C3%A9lian-hache-2189a626a/"
+                    github="https://github.com/CelianHache"
+                />
                 <Box
                     flex={3}
                     spaceY={5}
@@ -71,7 +81,7 @@ const HomePage: React.FC = () => {
                         </BlockquoteRoot>
                     </MotionContainer>
                     {pages.map((page, index) => (
-                        <PagePreview
+                        <ImageCard
                             key={index}
                             content={page.content}
                             src={page.src}

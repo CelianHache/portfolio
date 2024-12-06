@@ -12,7 +12,7 @@ export const PCE: React.FC = () => {
                 fontFamily={"Poppins"}
                 textTransform={"uppercase"}
             >
-                PCE
+                Professional communication in english
             </Heading>
 
             <WorkInProgress />

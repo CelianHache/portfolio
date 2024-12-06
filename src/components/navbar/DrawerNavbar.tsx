@@ -82,7 +82,7 @@ export const DrawerNavbar: React.FC = () => {
                                     color={"white"}
                                     size={"md"}
                                 >
-                                    Engineering course
+                                    Engineering courses
                                 </Heading>
                             </NavLink>
                             <NavLink
@@ -192,7 +192,7 @@ export const DrawerNavbar: React.FC = () => {
                                 </Heading>
                             </NavLink>
                             <NavLink
-                                to="/career/internship"
+                                to="/career/apprenticeship"
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({
                                     textDecoration: isActive
@@ -206,7 +206,7 @@ export const DrawerNavbar: React.FC = () => {
                                     color={"white"}
                                     size={"sm"}
                                 >
-                                    Internship
+                                    Apprenticeship
                                 </Heading>
                             </NavLink>
                             <NavLink

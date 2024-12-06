@@ -38,7 +38,7 @@ export const InlineNavbar: React.FC = () => {
                             })}
                         >
                             <Heading _hover={{ color: "blue.500" }} size={"md"}>
-                                Engineering course
+                                Engineering courses
                             </Heading>
                         </NavLink>
                     </HoverCardTrigger>
@@ -63,7 +63,10 @@ export const InlineNavbar: React.FC = () => {
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                textWrap={"nowrap"}
+                                wordBreak={""}
+                                wordWrap={""}
                                 textAlign={"left"}
                             >
                                 Projects
@@ -77,7 +80,10 @@ export const InlineNavbar: React.FC = () => {
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                textWrap={"nowrap"}
+                                wordBreak={""}
+                                wordWrap={""}
                                 textAlign={"left"}
                             >
                                 Productions
@@ -125,7 +131,10 @@ export const InlineNavbar: React.FC = () => {
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                textWrap={"nowrap"}
+                                wordBreak={""}
+                                wordWrap={""}
                                 textAlign={"left"}
                             >
                                 PCE
@@ -139,7 +148,10 @@ export const InlineNavbar: React.FC = () => {
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                textWrap={"nowrap"}
+                                wordBreak={""}
+                                wordWrap={""}
                                 textAlign={"left"}
                             >
                                 LV2
@@ -202,17 +214,20 @@ export const InlineNavbar: React.FC = () => {
                         <HoverCardArrow />
 
                         <NavLink
-                            to="/career/internship"
+                            to="/career/apprenticeship"
                             style={({ isActive }) => ({
                                 textDecoration: isActive ? "underline" : "none",
                             })}
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                whiteSpace={"nowrap"}
+                                overflow={"hidden"}
+                                textOverflow={"ellipsis"}
                                 textAlign={"left"}
                             >
-                                Internship
+                                Apprenticeship
                             </Heading>
                         </NavLink>
                         <NavLink
@@ -223,7 +238,10 @@ export const InlineNavbar: React.FC = () => {
                         >
                             <Heading
                                 _hover={{ color: "blue.500" }}
-                                size={"md"}
+                                size={"sm"}
+                                textWrap={"nowrap"}
+                                wordBreak={""}
+                                wordWrap={""}
                                 textAlign={"left"}
                             >
                                 PEP
