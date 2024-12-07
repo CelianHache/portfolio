@@ -42,6 +42,30 @@ export const LegalMention: React.FC = () => {
             licence: "Unsplash",
         },
         {
+            source: "https://unsplash.com/fr/photos/personnes-regardant-larene-de-football-qowyMze7jqg",
+            loc: "./Activities/football.jpg",
+            licence_link: "https://unsplash.com/fr/licence",
+            licence: "Unsplash",
+        },
+        {
+            source: "https://unsplash.com/fr/photos/personnes-regardant-larene-de-football-qowyMze7jqg",
+            loc: "./Activities/photography.jpg",
+            licence_link: "https://unsplash.com/fr/licence",
+            licence: "Unsplash",
+        },
+        {
+            source: "https://unsplash.com/fr/photos/deux-personnes-jouant-a-la-console-de-jeu-sony-ps4-eCktzGjC-iU",
+            loc: "./Activities/video_games.jpg",
+            licence_link: "https://unsplash.com/fr/licence",
+            licence: "Unsplash",
+        },
+        {
+            source: "https://unsplash.com/fr/photos/drone-quadricoptere-blanc-volant-pres-de-snow-mountain-pendant-la-journee-ZlkRrzJl20Q",
+            loc: "./Activities/drone.jpg",
+            licence_link: "https://unsplash.com/fr/licence",
+            licence: "Unsplash",
+        },
+        {
             source: "",
             loc: "./Tabs/activities.jpg",
             licence_link: "",

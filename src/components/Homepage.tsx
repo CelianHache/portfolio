@@ -1,8 +1,14 @@
 import React from "react";
-import { BlockquoteContent, BlockquoteRoot, Box } from "@chakra-ui/react";
+import {
+    BlockquoteContent,
+    BlockquoteRoot,
+    Box,
+    Heading,
+} from "@chakra-ui/react";
 import { MotionContainer } from "./containers/MotionContainer";
 import { ImageCard } from "./containers/ImageCard";
 import { ProfileContainer } from "./containers/ProfileContainer";
+import { YoutubePlayer } from "./career/YoutubePlayer";
 
 const HomePage: React.FC = () => {
     const pages = [
@@ -90,6 +96,25 @@ const HomePage: React.FC = () => {
                             reverse={index % 2 === 0}
                         />
                     ))}
+                    <MotionContainer
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        flexDir={"column"}
+                        p={5}
+                    >
+                        <Heading
+                            textAlign={"left"}
+                            color={"gray.800"}
+                            size={"md"}
+                            fontFamily={"Poppins"}
+                            w={"100%"}
+                            p={5}
+                        >
+                            Elevator pitch
+                        </Heading>
+                        <YoutubePlayer />
+                    </MotionContainer>
                 </Box>
             </Box>
         </Box>

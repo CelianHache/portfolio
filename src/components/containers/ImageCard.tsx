@@ -8,7 +8,7 @@ import { RetryImage } from "./RetryImage";
 interface ImageCardProps {
     title: string;
     src: string;
-    content: string;
+    content?: string;
     footer_left?: string;
     footer_right?: string;
     to?: string;
@@ -67,7 +67,9 @@ export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (
                         <Text>{props.footer_left}</Text>
                         <Text>{props.footer_right}</Text>
                     </Card.Header>
-                    <Card.Body>{props.content}</Card.Body>
+                    <Card.Body hidden={props.content === undefined}>
+                        {props.content}
+                    </Card.Body>
                     <Card.Footer>
                         <Box w="100%" display="flex" justifyContent="center">
                             <Button

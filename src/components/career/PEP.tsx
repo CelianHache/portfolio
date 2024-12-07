@@ -7,20 +7,23 @@ export const PEP: React.FC = () => {
     const mentors: Array<any> = [
         {
             name: "Olivier Lafourcade",
-            description: "",
+            description:
+                "Senior Software Engineer at Collins Aerospace. DevSecOps and tools.",
             linkedin: "https://www.linkedin.com/in/olafourcade/",
         },
         {
             name: "Anthony Deniau",
-            description: "",
+            description:
+                "Software Engineer at Collins Aerospace + Freelance developer.",
             linkedin: "https://www.linkedin.com/in/anthonydeniau/",
         },
         {
             name: "Mathieu Dingudart",
-            description: "",
+            description: "iOS Developer subcontractor at Collins Aerospace.",
             linkedin: "https://www.linkedin.com/in/mathieu-dinguidart/",
         },
     ];
+
     return (
         <Box spaceY={5}>
             <Heading
@@ -88,7 +91,7 @@ export const PEP: React.FC = () => {
                             src={mentor.src}
                             alignItems="center"
                             linkedin={mentor.linkedin}
-                        ></ProfileContainer>
+                        />
                     ))}
                 </Grid>
             </MotionContainer>
