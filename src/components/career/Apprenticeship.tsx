@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, HStack, Text, Stack } from "@chakra-ui/react";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 import { ImageCard } from "../containers/ImageCard";
 const experiences = [
     {
