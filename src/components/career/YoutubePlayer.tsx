@@ -9,7 +9,7 @@ export const YoutubePlayer: React.FC = () => {
             <ReactPlayer
                 width={"100%"}
                 height={"100%"}
-                url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                url="https://youtu.be/W8tZK_3NwcQ"
                 controls
             />
         </AspectRatio>
