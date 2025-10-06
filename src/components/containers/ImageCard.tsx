@@ -13,6 +13,7 @@ interface ImageCardProps {
     footer_right?: string;
     to?: string;
     reverse?: boolean;
+    navLabel?: string;
 }
 
 export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (
@@ -80,7 +81,7 @@ export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (
                                 hidden={props.to === undefined}
                             >
                                 <NavLink to={props.to ? props.to : ""}>
-                                    Visit page
+                                    {props.navLabel ?? "Visit page"}
                                 </NavLink>
                             </Button>
                         </Box>

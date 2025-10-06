@@ -1,5 +1,5 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { WorkInProgress } from "../containers/WorkInProgress";
+import { CivicEngagement } from "./CivicEngagement";
 
 export const Sustainability: React.FC = () => {
     return (
@@ -15,7 +15,7 @@ export const Sustainability: React.FC = () => {
                     Sustainability and civic engagement
                 </Heading>
 
-                <WorkInProgress />
+                <CivicEngagement />
             </Box>
         </Box>
     );
