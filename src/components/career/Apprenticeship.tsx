@@ -42,6 +42,7 @@ export const Apprenticeship: React.FC = () => {
                         key={index}
                         footer_left={exp.company}
                         footer_right={exp.dates}
+                        reverse={index % 2 === 0}
                     />
                 ))}
             </VStack>

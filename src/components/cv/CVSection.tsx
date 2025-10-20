@@ -10,26 +10,24 @@ export const CVSection: React.FC<CVSectionProps> = (props) => {
         <VStack gap={8} align="stretch" p={5} w={"100%"}>
             <HStack justifyContent="center" gap={5}>
                 <Button
-                    asChild
                     bgColor={"blue.700"}
                     color={"white"}
                     _hover={{ bgColor: "blue.500" }}
                     rounded={"md"}
                     hidden={props.cv_fr === undefined}
                 >
-                    <a href={props.cv_fr} target="_blank" rel="noopener noreferrer">
+                    <a href={props.cv_fr} target="_blank">
                         Resume (fr)
                     </a>
                 </Button>
                 <Button
-                    asChild
                     bgColor={"blue.700"}
                     color={"white"}
                     _hover={{ bgColor: "blue.500" }}
                     rounded={"md"}
                     hidden={props.cv_en === undefined}
                 >
-                    <a href={props.cv_en} target="_blank" rel="noopener noreferrer">
+                    <a href={props.cv_en} target="_blank">
                         Resume (en)
                     </a>
                 </Button>
