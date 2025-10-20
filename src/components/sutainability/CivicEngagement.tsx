@@ -8,7 +8,7 @@ export const CivicEngagement: React.FC = () => {
             organization: "Ingé+",
             role: "Mentor",
             src: "./Sustainability/logo_inge_plus.jpg",
-            to: "./Sustainability/inge_plus.pdf",
+            to: `${import.meta.env.BASE_URL}Sustainability/inge_plus.pdf`,
             dates: "2024 - 2025",
             description: "Mentoring students to promote equal opportunities, supporting them with their assignments, and answering their questions through regular exchanges by email, messages, and video calls."
         }]
@@ -23,6 +23,8 @@ export const CivicEngagement: React.FC = () => {
                     footer_left={engagment.organization}
                     footer_right={engagment.dates}
                     to={engagment.to}
+                    asRedirect={true}
+                    navLabel="View certificate"
                 />
             ))}
         </VStack>

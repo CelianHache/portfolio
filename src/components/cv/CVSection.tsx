@@ -17,7 +17,7 @@ export const CVSection: React.FC<CVSectionProps> = (props) => {
                     rounded={"md"}
                     hidden={props.cv_fr === undefined}
                 >
-                    <a href={props.cv_fr} target="_blank">
+                    <a href={props.cv_fr} target="_blank" rel="noopener noreferrer">
                         Resume (fr)
                     </a>
                 </Button>
@@ -29,7 +29,7 @@ export const CVSection: React.FC<CVSectionProps> = (props) => {
                     rounded={"md"}
                     hidden={props.cv_en === undefined}
                 >
-                    <a href={props.cv_en} target="_blank">
+                    <a href={props.cv_en} target="_blank" rel="noopener noreferrer">
                         Resume (en)
                     </a>
                 </Button>

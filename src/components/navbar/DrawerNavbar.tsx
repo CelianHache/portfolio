@@ -175,6 +175,22 @@ export const DrawerNavbar: React.FC = () => {
                                 </Heading>
                             </NavLink>
                             <NavLink
+                                to="/sustainability"
+                                onClick={onCloseDrawer}
+                                style={({ isActive }) => ({
+                                    textDecoration: isActive
+                                        ? "underline white"
+                                        : "none",
+                                })}
+                            >
+                                <Heading
+                                    _hover={{ color: "blue.500" }}
+                                    color={"white"}
+                                    size={"md"}>
+                                    Sustainability and civic engagement
+                                </Heading>
+                            </NavLink>
+                            <NavLink
                                 to="/career"
                                 onClick={onCloseDrawer}
                                 style={({ isActive }) => ({

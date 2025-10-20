@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
         },
         {
             content:
-                "Overview of international mobility options, including PCE and second language coursess",
+                "Overview of international mobility options, including PCE and second language courses",
             src: "./Tabs/mobility.jpg",
             title: "International mobility",
             to: "/mobility",
@@ -62,8 +62,8 @@ const HomePage: React.FC = () => {
                     name="Célian Hache"
                     src="profile.png"
                     alignItems="center"
-                    cv_fr="./cv/CV_fr.jpg"
-                    cv_en="./cv/CV_en.jpg"
+                    cv_fr={`${import.meta.env.BASE_URL}cv/CV_fr.pdf`}
+                    cv_en={`${import.meta.env.BASE_URL}cv/CV_en.pdf`}
                     email="celian.hache@gmail.com"
                     linkedin="https://www.linkedin.com/in/c%C3%A9lian-hache-2189a626a/"
                     github="https://github.com/CelianHache"

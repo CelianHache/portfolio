@@ -2,10 +2,7 @@ import {
     Box,
     Flex,
     Heading,
-    HoverCardArrow,
-    HoverCardContent,
-    HoverCardRoot,
-    HoverCardTrigger,
+    HoverCard,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 
@@ -24,15 +21,14 @@ export const InlineNavbar: React.FC = () => {
                 </Heading>
             </NavLink>
             <Box position={"relative"}>
-                <HoverCardRoot
+                <HoverCard.Root
                     positioning={{ placement: "bottom" }}
                     openDelay={0}
                     closeDelay={100}
                 >
-                    <HoverCardTrigger asChild>
+                    <HoverCard.Trigger asChild>
                         <NavLink
                             to="/engineering"
-                            onClick={() => {}}
                             style={({ isActive }) => ({
                                 textDecoration: isActive ? "underline" : "none",
                             })}
@@ -41,8 +37,8 @@ export const InlineNavbar: React.FC = () => {
                                 Engineering courses
                             </Heading>
                         </NavLink>
-                    </HoverCardTrigger>
-                    <HoverCardContent
+                    </HoverCard.Trigger>
+                    <HoverCard.Content
                         width="100%"
                         bgColor={"white"}
                         backdropBlur={"5000px"}
@@ -53,7 +49,7 @@ export const InlineNavbar: React.FC = () => {
                         zIndex={10}
                         boxShadow="sm"
                     >
-                        <HoverCardArrow />
+
 
                         <NavLink
                             to="/engineering/projects"
@@ -89,16 +85,16 @@ export const InlineNavbar: React.FC = () => {
                                 Productions
                             </Heading>
                         </NavLink>
-                    </HoverCardContent>
-                </HoverCardRoot>
+                    </HoverCard.Content>
+                </HoverCard.Root>
             </Box>
             <Box position={"relative"}>
-                <HoverCardRoot
+                <HoverCard.Root
                     positioning={{ placement: "bottom" }}
                     openDelay={0}
                     closeDelay={100}
                 >
-                    <HoverCardTrigger asChild>
+                    <HoverCard.Trigger asChild>
                         <NavLink
                             to="/mobility"
                             style={({ isActive }) => ({
@@ -109,8 +105,8 @@ export const InlineNavbar: React.FC = () => {
                                 International mobility
                             </Heading>
                         </NavLink>
-                    </HoverCardTrigger>
-                    <HoverCardContent
+                    </HoverCard.Trigger>
+                    <HoverCard.Content
                         width="100%"
                         bgColor={"white"}
                         backdropBlur={"5000px"}
@@ -121,7 +117,7 @@ export const InlineNavbar: React.FC = () => {
                         zIndex={10}
                         boxShadow="sm"
                     >
-                        <HoverCardArrow />
+
 
                         <NavLink
                             to="/mobility/pce"
@@ -157,8 +153,8 @@ export const InlineNavbar: React.FC = () => {
                                 LV2
                             </Heading>
                         </NavLink>
-                    </HoverCardContent>
-                </HoverCardRoot>
+                    </HoverCard.Content>
+                </HoverCard.Root>
             </Box>
             <NavLink
                 to="/sustainability"
@@ -183,12 +179,12 @@ export const InlineNavbar: React.FC = () => {
                 </Heading>
             </NavLink>
             <Box position={"relative"}>
-                <HoverCardRoot
+                <HoverCard.Root
                     positioning={{ placement: "bottom" }}
                     openDelay={0}
                     closeDelay={100}
                 >
-                    <HoverCardTrigger asChild>
+                    <HoverCard.Trigger asChild>
                         <NavLink
                             to="/career"
                             style={({ isActive }) => ({
@@ -199,8 +195,8 @@ export const InlineNavbar: React.FC = () => {
                                 Career development
                             </Heading>
                         </NavLink>
-                    </HoverCardTrigger>
-                    <HoverCardContent
+                    </HoverCard.Trigger>
+                    <HoverCard.Content
                         width="100%"
                         bgColor={"white"}
                         backdropBlur={"5000px"}
@@ -211,7 +207,7 @@ export const InlineNavbar: React.FC = () => {
                         zIndex={10}
                         boxShadow="sm"
                     >
-                        <HoverCardArrow />
+
 
                         <NavLink
                             to="/career/apprenticeship"
@@ -247,8 +243,8 @@ export const InlineNavbar: React.FC = () => {
                                 PEP
                             </Heading>
                         </NavLink>
-                    </HoverCardContent>
-                </HoverCardRoot>
+                    </HoverCard.Content>
+                </HoverCard.Root>
             </Box>
         </Flex>
     );

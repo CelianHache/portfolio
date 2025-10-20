@@ -14,6 +14,7 @@ interface ImageCardProps {
     to?: string;
     reverse?: boolean;
     navLabel?: string;
+    asRedirect?: boolean;
 }
 
 export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (
@@ -80,9 +81,14 @@ export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (
                                 _hover={{ bgColor: "blue.500" }}
                                 hidden={props.to === undefined}
                             >
-                                <NavLink to={props.to ? props.to : ""}>
-                                    {props.navLabel ?? "Visit page"}
-                                </NavLink>
+                                {props.asRedirect ?
+                                    <a href={props.to ? props.to : ""} target="_blank" rel="noopener noreferrer" >
+                                        {props.navLabel ?? "Visit page"}
+                                    </a> :
+                                    <NavLink to={props.to ? props.to : ""}>
+                                        {props.navLabel ?? "Visit page"}
+                                    </NavLink>
+                                }
                             </Button>
                         </Box>
                     </Card.Footer>
