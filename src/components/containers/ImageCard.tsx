@@ -15,6 +15,7 @@ interface ImageCardProps {
     reverse?: boolean;
     navLabel?: string;
     asRedirect?: boolean;
+    height?: string;
 }
 
 export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (props) => {
@@ -31,6 +32,7 @@ export const ImageCard: React.FC<PropsWithChildren<ImageCardProps>> = (props) =>
                 border="none"
                 color="gray.900"
                 alignItems="stretch"
+                h={props.height ? props.height : "auto"}
             >
                 {/* Image gauche / haut */}
                 {(flexDir === "column" || !props.reverse) && (

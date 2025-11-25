@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 import { ImageCard } from "../containers/ImageCard";
 
 export const Activities: React.FC = () => {
@@ -30,7 +30,7 @@ export const Activities: React.FC = () => {
 
     return (
         <Box w={"100%"} display={"flex"} justifyContent={"center"}>
-            <Box spaceY={5} w={{ base: "100%", lg: "80%" }}>
+            <Box spaceY={5}>
                 <Heading
                     size={"5xl"}
                     fontWeight={"bold"}
@@ -40,15 +40,18 @@ export const Activities: React.FC = () => {
                 >
                     Sport and other activities
                 </Heading>
-                {activities.map((activity, index) => (
-                    <ImageCard
-                        key={index}
-                        src={activity.src}
-                        title={activity.title}
-                        content={activity.content}
-                        reverse={index % 2 === 0}
-                    />
-                ))}
+                <VStack spaceY={5} align="stretch">
+                    {activities.map((activity, index) => (
+                        <ImageCard
+                            key={index}
+                            src={activity.src}
+                            title={activity.title}
+                            content={activity.content}
+                            reverse={index % 2 === 0}
+                            height="250px"
+                        />
+                    ))}
+                </VStack>
             </Box>
         </Box>
     );
