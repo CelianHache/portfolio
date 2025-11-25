@@ -1,6 +1,5 @@
 import { Box, Heading } from "@chakra-ui/react";
-import { PCE } from "./PCE";
-import { LV2 } from "./LV2";
+import { WorkInProgress } from "../containers/WorkInProgress";
 
 export const Mobility: React.FC = () => {
     return (
@@ -15,9 +14,20 @@ export const Mobility: React.FC = () => {
                 >
                     International Mobility
                 </Heading>
+                <Box spaceY={5}>
+                    <Heading
+                        textAlign={"left"}
+                        color={"gray.800"}
+                        size={"xl"}
+                        fontWeight={"semi-bold"}
+                        fontFamily={"Poppins"}
+                        textTransform={"uppercase"}
+                    >
+                        Professional communication and english
+                    </Heading>
 
-                <PCE />
-                <LV2 />
+                    <WorkInProgress />
+                </Box>
             </Box>
         </Box>
     );

@@ -56,22 +56,6 @@ export const InlineNavbar: React.FC = () => {
                             label="International mobility"
                         />
                     </HoverCard.Trigger>
-                    <HoverCard.Content
-                        width="100%"
-                        bgColor={"white"}
-                        backdropBlur={"5000px"}
-                        p={5}
-                        mt={2}
-                        borderRadius="md"
-                        position="absolute"
-                        zIndex={10}
-                        boxShadow="sm"
-                    >
-                        <NavLink
-                            to="/mobility/pce"
-                            label="PCE"
-                        />
-                    </HoverCard.Content>
                 </HoverCard.Root>
             </Box>
             <NavLink

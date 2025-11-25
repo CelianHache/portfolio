@@ -12,8 +12,6 @@ import { Projects } from "./components/engineering/Projects";
 import { Productions } from "./components/engineering/Productions";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import { Mobility } from "./components/mobility/Mobility";
-import { PCE } from "./components/mobility/PCE";
-import { LV2 } from "./components/mobility/LV2";
 import { Sustainability } from "./components/sutainability/Sustainability";
 import { Activities } from "./components/activities/Activities";
 import { Career } from "./components/career/career";
@@ -66,8 +64,6 @@ function App() {
                                     path="/mobility"
                                     element={<Mobility />}
                                 />
-                                <Route path="/mobility/PCE" element={<PCE />} />
-                                <Route path="/mobility/LV2" element={<LV2 />} />
                                 <Route
                                     path="/sustainability"
                                     element={<Sustainability />}
