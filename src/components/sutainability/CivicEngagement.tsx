@@ -7,8 +7,8 @@ export const CivicEngagement: React.FC = () => {
         {
             organization: "Ingé+",
             role: "Mentor",
-            src: "./Sustainability/logo_inge_plus.jpg",
-            to: `${import.meta.env.BASE_URL}Sustainability/inge_plus.pdf`,
+            src: "./sustainability/logo_inge_plus.jpg",
+            to: `${import.meta.env.BASE_URL}sustainability/inge_plus.pdf`,
             dates: "2024 - 2025",
             description: "Mentoring students to promote equal opportunities, supporting them with their assignments, and answering their questions through regular exchanges by email, messages, and video calls."
         }]
